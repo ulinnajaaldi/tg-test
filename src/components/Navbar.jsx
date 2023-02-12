@@ -5,11 +5,11 @@ export default function Navbar() {
   return (
     <div className="flex justify-between items-center h-20 border-b-2">
       <Link to="/">Aldilla Ulinnaja</Link>
-      <div className="flex gap-6">
+      <div className="flex gap-6 text-slate-400">
         <NavLink
           to="/logic-1"
           className={({ isActive }) =>
-            isActive ? "text-slate-500" : "hover:text-slate-500"
+            isActive ? "text-slate-900" : "hover:text-slate-900"
           }
         >
           Logic 1
@@ -17,7 +17,7 @@ export default function Navbar() {
         <NavLink
           to="/logic-2"
           className={({ isActive }) =>
-            isActive ? "text-slate-500" : "hover:text-slate-500"
+            isActive ? "text-slate-900" : "hover:text-slate-900"
           }
         >
           Logic 2
