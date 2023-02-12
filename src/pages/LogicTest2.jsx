@@ -35,9 +35,10 @@ export default function NameGroupPage() {
 
   return (
     <div className="flex flex-col items-center justify-center py-8">
+      <h1 className="font-bold text-xl text-underline">Group Sorting</h1>
       <form
         onSubmit={handleSubmit}
-        className="flex items-end justify-center gap-4 min-w-[400px] bg-teal-500 p-4 rounded-md"
+        className="flex items-end justify-center gap-4 min-w-[400px] bg-teal-500 p-4 rounded-md my-5"
       >
         <div>
           <label htmlFor="name" className="block mb-2">
@@ -60,9 +61,9 @@ export default function NameGroupPage() {
         </button>
       </form>
       {submissions.length > 0 && (
-        <div className="mt-4">
+        <div className="w-[400px]">
           <p>Submissions:</p>
-          <ul>
+          <ul className="bg-yellow-400 w-[400px] rounded-md py-2 pl-10 leading-loose">
             {submissions.map((submission, index) => (
               <li key={index}>{`${submission.name} is ${submission.group}`}</li>
             ))}
@@ -70,7 +71,10 @@ export default function NameGroupPage() {
         </div>
       )}
       {submissions.length > 0 && (
-        <button className="bg-gray-300 px-2 py-1 mt-4" onClick={handleReset}>
+        <button
+          className="bg-gray-300 px-2 py-1 mt-4 rounded-md"
+          onClick={handleReset}
+        >
           Reset
         </button>
       )}
