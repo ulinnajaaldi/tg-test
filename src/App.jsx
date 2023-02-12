@@ -2,13 +2,15 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import "./index.css";
 import HomePage from "./pages/HomePage";
-import LogicTestPage from "./pages/LogicTestPage";
+import LogicTest from "./pages/LogicTest";
+import LogicTest2 from "./pages/LogicTest2";
 import Layout from "./pages/layout";
 
 export default function App() {
   const routes = [
     { path: "/", component: <HomePage /> },
-    { path: "/logic", component: <LogicTestPage /> },
+    { path: "/logic-1", component: <LogicTest /> },
+    { path: "/logic-2", component: <LogicTest2 /> },
   ];
   return (
     <>
